@@ -1,0 +1,23 @@
+
+.manju{background-image: url("../img/one.jpg");
+    position: absolute;
+    width: 100%;
+    height: auto;
+    }
+.manju h3{color: white;font-family: 'Lora', serif;    margin-left: 12px;} 
+p {
+    color: white;
+    margin: 13px;
+    text-align: justify;
+    font-size: 16px;
+}
+@media (min-width: 980px) and (max-width: 1990px) {
+	.manjuimg{
+		width: 50%;
+		height: 550px;
+	}
+
+}
+
+
+

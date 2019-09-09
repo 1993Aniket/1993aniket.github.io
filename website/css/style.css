@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+	background:#fa7c30;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	font-family:"open sans", Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+	width:1000px;
+	margin:0 auto;
+}
+
+.FL{
+	float:left;
+}
+
+.FR{
+	float:right;
+}
+
+ul, li, .no-bullets{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+.no-bullets{
+	list-style-type:none !important;
+}
+
+.logo{
+	width:1000px;
+	height:60px;
+	margin-top:40px;
+}
+
+.wrapper .sub-link{
+	width:1000px;
+	height:30px;
+	text-align:right;
+	margin:-9px 0 0 0;
+	
+}
+
+.sub-link ul li{
+	float:right;
+}
+
+.sub-link ul li {
+	margin:2px 10px 0 0;
+}
+
+.sub-link .links a{
+	line-height:30px;
+	text-decoration:none;
+}
+
+.sub-link .links a{
+	color:#000;
+	font-size:13px;
+	margin:0 5px ;
+}
+
+.sub-link .links{
+	margin:0 -6px 0 0;
+	line-height:30px;
+}
+
+.sub-link .links ul li{
+	
+}
+
+.wrapper .navigation{
+	background:#000;
+	width:1000px;
+	height:50px;
+	margin-top:7px;
+	border-radius:5px;
+}
+
+.clear{
+	clear:both;
+	
+	}
+
+.wrapper .navigation ul li{
+	float:right;
+	list-style:none;
+	margin-right:33px;
+	line-height:50px;
+	font-size:19px;
+}
+
+.wrapper .navigation ul li a{
+	text-decoration:none;
+	color:#FFF;
+}
+
+.navigation ul li div {
+	display:none;
+	position:absolute;
+	z-index:99999;
+	background:#000;
+	width:270px;
+	}
+	
+.navigation ul li:hover div {
+	display:block;
+}
+
+.navigation ul li div ul li{
+	float:none !important;
+	margin:0px;
+	padding:0px;
+}
+
+.navigation ul li div ul a:hover{
+	color:#fa7c30;
+	
+}
+
+.navigation ul li a:hover{
+	color:#fa7c30;
+}
+
+.navigation ul li div ul a{
+	display:block;
+	padding:0 0 0 20px;
+}
+
+.empty{
+	height:10px;
+	width:1000px;
+}
+
+.wrapper .footer{
+	width:1000px;
+	
+	height:20px;
+	font-size:11px;
+}
+
+.wrapper .b-n-kumar{
+	width:1000px;
+	height:229px;
+	margin-top:25px;
+	}
+
+.wrapper .white-patch{
+	width:770px;
+	background:#FFF;
+	margin-top:30px;
+	border-radius:5px;
+	float:left;
+	
+}
+
+.wrapper .white-patch .text{
+	width:690px;
+	font-size:16px;
+	padding:15px 0 0 0px;
+	font-weight:bold;
+}
+
+.wrapper .white-patch-text{
+	width:690px;
+	padding:0 0 0 35px;
+	font-size:14px;
+}
+
+/*.main-holder{
+	background:url(../images/small-line.png) repeat-y 800px top;
+}*/
+
+.wrapper .small-box{
+	width:230px;
+	height:500px;
+	background:#fb904f;
+	float:right;
+	margin-top:30px;
+	border-radius:0 5px 5px 0;
+	
+}
+.icon{
+	float: right;
+	
+}
+.wrapper .Vivek{
+	width:1000px;
+	height:262px;
+	margin-top:0px;
+	 margin-left: 0px;
+	}
+	.wrapper .Vivek1{
+	width:1000px;
+	height:262px;
+	margin-top:0px;
+	 margin-left: -36px;
+	}
+	
+	.wrapper .pooja{
+	width:1000px;
+	height:275px;
+	margin-top:40px;
+	 margin-left: 0px;
+	}
+	.wrapper .mchi{
+	width:1000px;
+	height:230px;
+	margin-top:30px;
+	 margin-left: 0px;
+	}
+	
+	
+ .white-patch-text ul li{
+    list-style-type:disc;
+    margin: 15px;
+    padding: 0;
+}
+
+.white-patch-text ol li{
+    list-style-type:decimal-leading-zero;
+    margin: 0;
+    padding: 0;
+}
+.error{
+	margin-left: 300px;
+margin-top: 150px;
+	
+	
+}
+
+
+.innovation table{
+	
+border-left: 1px solid #e6e6e6;
+border-top: 1px solid #e6e6e6;
+margin: 0px 0px 18px;
+width: 100%;	
+	
+}
+.innovation tr{
+	
+	
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;	
+}
+
+.innovation td, th{
+	
+padding: 6px 12px 6px;
+border-right: 1px solid #e6e6e6;
+border-bottom: 1px solid #e6e6e6;	
+}
+.innovation tbody{
+	
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;	
+	
+}
+
+.left-section-heading {
+	width: 540px;
+padding: 10px;
+background:url(file://///nitish-pc/www/concept-pr/images/banconheading-bg.jpg) repeat left center;
+font-family: 'OpenSansCondensed',Arial,Helvetica,sans-serif;
+font-weight: bold;
+font-size: 24px;
+color: #ffffff;
+border-left: solid #882b0d 10px;
+	
+	
+}
+
+<!--ligthbox-->
+#backgroundPopup{z-index:1;position:fixed;display:none;height:100%;width:100%;background:#000;top:0;left:0}
+#toPopup{font-family:"lucida grande",tahoma,verdana,arial,sans-serif;background:none repeat scroll 0 0 #fff;color:#333;display:none;font-size:14px;left:50%;margin-left:-335px;position:fixed;top:2%;width:650px;z-index:2}
+#toPopup1{font-family:"lucida grande",tahoma,verdana,arial,sans-serif;background:none repeat scroll 0 0 #fff;color:#333;display:none;font-size:14px;left:50%;margin-left:-335px;position:fixed;top:2%;width:650px;z-index:2}
+div.loader{background:url(file://///nitish-pc/www/concept-pr/images/loading.gif) no-repeat scroll 0 0 transparent;height:32px;width:32px;display:none;z-index:9999;top:40%;left:50%;position:absolute;margin-left:-10px}
+div.close{background:url(file://///nitish-pc/www/concept-pr/images/closebox.png) no-repeat scroll 0 0 transparent;bottom:15px;cursor:pointer;float:right;height:30px;left:16px;position:relative;width:30px}
+span.ecs_tooltip{background:none repeat scroll 0 0 #000;border-radius:2px 2px 2px 2px;color:#fff;display:none;font-size:11px;height:16px;opacity:.7;padding:4px 3px 2px 5px;position:absolute;right:-62px;text-align:center;top:-51px;width:93px}
+span.arrow{border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #000;display:block;height:1px;left:40px;position:relative;top:3px;width:1px}
+div#popup_content{margin:4px 7px;width:630px;height:580px;overflow-y:scroll}
+
+
+
+.wrapper-team {
+	width:1000px !important;
+	padding-bottom: 20px;
+}
+
+.wrapper-team .white-patch-text {
+	padding: 0 0 0 20px !important;
+}
+
+.wrapper-team div.Accordion {
+	width: 930px !important;
+}
+
+.wrapper-team div.Accordion .team-top {
+	width: 950px;
+	float: left;
+	background: #F5F5F5;
+	border: 1px solid #E7E7E7;
+	border-bottom:none;
+	margin: 0 0 10px 0;
+}
+
+.wrapper-team table tr td.name {
+	vertical-align: top;
+	margin: 5px 0 0 7px;
+	float: left;
+}
+
+.wrapper-team span.profile {
+	font-weight: normal;
+	font-size: 12px;
+	color: #7A7A7A;
+}

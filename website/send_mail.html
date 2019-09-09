@@ -1,0 +1,37 @@
+<?php
+//fname is variable
+$Name = $_POST["name"];
+$Company = $_POST["Company"];
+$Email = $_POST["Email"];
+$City = $_POST["City"];
+$Price_Range = $_POST["Price_Range"];
+$c_no = $_POST["c_no"];
+$yq = $_POST["yq"];
+//$Comment = $_POST["comments"];
+//$mobile = $_POST["mobile"];
+//$check = $_POST["check"];
+
+$to = "sumanta90parida@gmail.com,customerservice@divinesolitaires.com";
+$subject = 'Feedback / Enquiry Form';
+$content = "<font face='verdana' style='font-size:12px'><br /><br />Name : $Name <br /><br /> Company : $Company <br /><br /> Email : $Email <br /><br /> City : $City <br /><br /> Price Range : $Price_Range <br /><br /> Contact No : $c_no <br/><br/> Your Query : $yq </font>";
+$headers = "From: $email" . "\r\n";
+$headers .= "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+$headers .= "Reply-To: $email" . "\r\n";
+
+//echo $subject.' '.$content; die();
+
+
+	$mail = mail($to, $subject, $content, $headers);
+	if($mail) { ?>
+    <script>alert("Thank you for your enquiry. We will contact you shortly.."); location.href="customer_service_desk.php";</script>
+    <?php
+	} else {
+			?>
+		<script>
+			alert("Your enquiry was unable to send due to some technical problem. Please try back later!!!");
+			location.href="customer_service_desk.php";
+        </script>
+	<?php
+}
+?>

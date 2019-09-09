@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CONCEPT-PR</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/ie6.js"></script>
+<link href="css/slider.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+
+
+function validate_email(field,alerttxt)
+
+
+
+{
+
+
+
+with (field)
+
+
+
+{
+
+
+
+apos=value.indexOf("@");
+
+
+
+dotpos=value.lastIndexOf(".");
+
+
+
+if (apos<1||dotpos-apos<2) 
+
+
+
+  {alert(alerttxt);return false;}
+
+
+
+else {return true;}
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+function validate_no(field,alerttxt)
+
+
+
+{
+
+
+
+with(field)
+
+
+
+{
+
+
+
+if(isNaN(value)){
+
+
+
+alert(alerttxt);return false;}
+
+
+
+else {return true;}
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+function validate_required(field,alerttxt)
+
+
+
+{
+
+
+
+with (field)
+
+
+
+{
+
+
+
+  if (value==null||value=="")
+
+
+
+  {
+
+
+
+  alert(alerttxt);return false;
+
+
+
+  }
+
+
+
+  else
+
+
+
+  {
+
+
+
+  return true;
+
+
+
+  }
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+function validate_nosize(field,alerttxt)
+
+
+
+{
+
+
+
+with(field)
+
+
+
+{
+
+
+
+	if(!(value.length== 10))
+
+
+
+	{
+
+
+
+	alert(alerttxt);return false;
+
+
+
+	}
+
+
+
+	else
+
+
+
+	{
+
+
+
+	return true;
+
+
+
+	}
+
+
+
+}		
+
+
+
+}
+
+
+
+//*adagshagdhjdg
+
+
+
+
+
+
+
+function checkTime(field)
+
+
+
+  {
+
+
+
+    var errorMsg = "";
+
+
+
+
+
+
+
+    // regular expression to match required time format
+
+
+
+    re = /^(\d{1,2}):(\d{2})(:00)?([ap]m)?$/;
+
+
+
+
+
+
+
+    if(field.value != '') {
+
+
+
+      if(regs = field.value.match(re)) {
+
+
+
+        if(regs[4]) {
+
+
+
+          // 12-hour time format with am/pm
+
+
+
+          if(regs[1] < 1 || regs[1] > 12) {
+
+
+
+            errorMsg = "Invalid value for hours: " + regs[1];
+
+
+
+          }
+
+
+
+        } else {
+
+
+
+          // 24-hour time format
+
+
+
+          if(regs[1] > 23) {
+
+
+
+            errorMsg = "Invalid value for hours: " + regs[1];
+
+
+
+          }
+
+
+
+        }
+
+
+
+        if(!errorMsg && regs[2] > 59) {
+
+
+
+          errorMsg = "Invalid value for minutes: " + regs[2];
+
+
+
+        }
+
+
+
+      } else {
+
+
+
+        errorMsg = "Invalid time format: " + field.value;
+
+
+
+      }
+
+
+
+    }
+
+
+
+
+
+
+
+    if(errorMsg != "") {
+
+
+
+      alert(errorMsg);
+
+
+
+      field.focus();
+
+
+
+      return false;
+
+
+
+    }
+
+
+
+
+
+
+
+    return true;
+
+
+
+  }
+
+
+
+
+
+
+
+//*gdahsgd
+
+
+
+
+
+
+
+function validate(thisform)
+
+
+
+{
+
+
+
+with (thisform)
+
+
+
+{
+
+
+
+if (validate_required(name,"Please enter your Name!")==false)
+
+
+
+  {
+
+
+
+	  name.focus();return false;
+
+
+
+  
+
+
+
+  }
+
+
+
+  else
+
+
+
+  
+
+
+
+  if (validate_required(designation,"Please enter your Designation!")==false)
+
+
+
+  {designation.focus();return false;}
+
+
+
+  
+
+
+
+  else
+
+
+
+  if (validate_required(org,"Please enter your Organisation Name!")==false)
+
+
+
+  {org.focus();return false;}
+
+
+
+  
+
+
+
+  else
+
+
+
+  
+
+
+
+  if (validate_required(email,"Please enter your E-mail!")==false)
+
+
+
+  {email.focus();return false;}
+
+
+
+  else
+
+
+
+  if (validate_email(email,"Please enter a valid E-mail address!")==false)
+
+
+
+  {email.focus();return false;}
+
+
+
+  
+
+
+
+  else
+
+
+
+  if (validate_required(mobile,"Please enter your Contact number!")==false)
+
+
+
+  {mobile.focus();return false;}
+
+
+
+  else
+
+
+
+  if (validate_no(mobile,"Telephone must be number!!")==false)
+
+
+
+  {mobile.focus();return false;}
+
+
+
+  else
+
+
+
+  if(validate_nosize(mobile,"This is not a valid number")==false)
+
+
+
+  {mobile.focus();return false;}
+
+
+
+ /* else
+
+
+
+  if (validate_required(time,"Please enter your Preferred Time For Call Back")==false)
+
+
+
+  {time.focus();return false;}
+
+
+
+  else
+
+
+
+  if (checkTime(time,"Please enter a valid Time For Call Back!")==false)
+
+
+
+  {time.focus();return false;}*/
+
+
+
+  
+
+
+
+  else
+
+
+
+  if (validate_required(comment,"Please enter Comments")==false)
+
+
+
+  {comment.focus();return false;}
+
+
+
+
+
+
+
+else return true;
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="logo FL"> <a href="index.html"><img src="images/logo.png" alt="" border="0" /></a> </div>
+  <div class="sub-link FR">
+    <ul>
+      <li></li>
+      <li>
+        <div class="links">
+          <ul>
+            <li></li>
+            <!--<li><a href="http://www.brewconceptindia.com/" target="_blank">BREW</a></li>
+            <li><a href="http://conceptdigital.in/" target="_blank">DIGITAL</a></li>-->
+            <li><a href="http://conceptir.com/" target="_blank">CONCEPT IR</a></li>
+            <li class="no-bullets"><a href="http://www.conceptindia.com/" target="_blank">CONCEPT COMMUNICATION</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <div class="navigation">
+    <ul>
+      <li><a href="Awards.html">AWARDS</a></li>
+      <li><a href="Contact-us.html">CONTACT US</a></li>
+      <li><a href="Thought pad.html">THOUGHT PAD</a></li>
+      <li><a href="#">CASE-STUDY</a>
+        <div>
+          <ul>
+            <li><a href="idbi.html">IDBI</a></li>
+            <li><a href="MCHI–CREDAI.html">MCHI-CREDAI</a></li>
+            <li><a href="Iifa-2012.html">Iifa 2011</a></li>
+            <li><a href="Mumbai-Marathon.html">Mumbai Marathon</a></li>
+            <li><a href="Bancon-innovation.html">Bancon 2012</a></li>
+            <li><a href="market.html">The Market</a></li>
+            <li><a href="campa-cola.html">Campa Cola Compound</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="Team.html">TEAM</a></li>
+      <li><a href="essence.html">THE ESSENCE</a></li>
+      <li><a href="About-us.html">ABOUT US</a></li>
+    </ul>
+  </div>
+  <div class="b-n-kumar"> <img src="images/contactus.png" alt="" border="0" /> </div>
+  <div class="white-patch">
+    <h1>Ashish Jalan</h1>
+    <p style="margin-top:-17px;">Director & CEO Concept Public Relations<br />
+      Tel: +91 98 2015 8138<br />
+      Email:<a href="mailto:ashish@conceptindia.com" style="text-decoration:none;" > ashish@conceptindia.com</a></p>
+    <h4>Leave your details to enable us to get in touch with you at the earliest.</h4>
+    <form name="form1" action="contact_mail.php"  method="post" onSubmit="return validate(this)">
+      <table width="450px">
+        <tr>
+          <td valign="top"><label for="first_name">Name *</label></td>
+          <td valign="top"><input  type="text" name="name" maxlength="50" size="30" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="last_name">Designation *</label></td>
+          <td valign="top"><input  type="text" name="designation" maxlength="50" size="30" /></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="lname">Organisation *</label></td>
+          <td valign="top"><input  type="text" name="org" maxlength="50" size="30"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="email">Email Address *</label></td>
+          <td valign="top"><input  type="text" name="email" maxlength="80" size="30"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="telephone">Contact Number *</label></td>
+          <td valign="top"><input  type="text" name="mobile" maxlength="30" size="30"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td valign="top"><label for="comments">Comment *</label></td>
+          <td valign="top"><textarea  name="comment" maxlength="1000" cols="25" rows="6"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="left" style="text-align:left">&nbsp;</td>
+        </tr>
+        
+          <td colspan="2" align="left" style="text-align:left"><input name="Submit" type="submit" value="Submit"/>
+            &nbsp;&nbsp;&nbsp;
+            <input name="Reset" type="Reset" value="Reset"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center"></td>
+        </tr>
+      </table>
+    </form>
+    <iframe width="685" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Concept+Communication+Ltd.,+Fort,+Mumbai,+Maharashtra&amp;aq=0&amp;oq=Fort,+Mumbai,+Maharashtra+concpet&amp;sll=18.815427,76.775144&amp;sspn=18.111061,33.815918&amp;ie=UTF8&amp;hq=Concept+Communication+Ltd.,&amp;hnear=Fort,+Mumbai,+Maharashtra&amp;ll=18.935394,72.83221&amp;spn=0.006295,0.010049&amp;t=m&amp;output=embed"></iframe>
+    <br />
+    <small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Concept+Communication+Ltd.,+Fort,+Mumbai,+Maharashtra&amp;aq=0&amp;oq=Fort,+Mumbai,+Maharashtra+concpet&amp;sll=18.815427,76.775144&amp;sspn=18.111061,33.815918&amp;ie=UTF8&amp;hq=Concept+Communication+Ltd.,&amp;hnear=Fort,+Mumbai,+Maharashtra&amp;ll=18.935394,72.83221&amp;spn=0.006295,0.010049&amp;t=m" style="color:#0000FF;text-align:left">View Larger Map</a></small><br />
+    <br />
+  </div>
+</div>
+<div class="small-box"> </div>
+<div class="clear"> </div>
+<div class="footer">
+  <p> 2018. &#169; Concept Communication.  </p>
+  </br>
+  </br>
+</div>
+</div>
+<script>
+
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+
+
+
+
+  ga('create', 'UA-41915683-1', 'conceptpr.com');
+
+
+
+  ga('send', 'pageview');
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

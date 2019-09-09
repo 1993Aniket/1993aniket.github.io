@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /news.php
+Disallow: /news.php/*
+Disallow: /clearlove.php
+Disallow: /clearlove.php/*

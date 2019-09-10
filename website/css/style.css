@@ -139,10 +139,11 @@ ul, li, .no-bullets{
 }
 
 .wrapper .footer{
-	width:1000px;
-	
-	height:20px;
-	font-size:11px;
+	width: 1000px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
 }
 
 .wrapper .b-n-kumar{
@@ -171,6 +172,7 @@ ul, li, .no-bullets{
 	width:690px;
 	padding:0 0 0 35px;
 	font-size:14px;
+	height: auto !important
 }
 
 /*.main-holder{
@@ -179,7 +181,7 @@ ul, li, .no-bullets{
 
 .wrapper .small-box{
 	width:230px;
-	height:500px;
+	height: auto !important;
 	background:#fb904f;
 	float:right;
 	margin-top:30px;
